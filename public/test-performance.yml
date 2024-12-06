@@ -1,0 +1,14 @@
+config:
+  target: 'http://127.0.0.1:8000'
+  phases:
+    - duration: 60
+      arrivalRate: 50
+scenarios:
+  - flow:
+      - post:
+          url: '/validar'
+          json:
+            cpf: '123.456.789-09'
+            email: 'teste@example.com'
+            telefone: '(11) 99999-9999'
+            cep: '12345-678'
